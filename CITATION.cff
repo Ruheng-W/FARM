@@ -34,7 +34,7 @@ url: "https://cdc.biohpc.swmed.edu/farm/intro"
 license: MIT
 year: 2026
 preferred-citation:
-  type: article
+  type: unpublished
   title: "Interpretable Antimicrobial Resistance Prediction via Cross-Attention Between Antibiotic Substructures and Genomic Features"
   authors:
     - family-names: Wang
@@ -43,6 +43,5 @@ preferred-citation:
       given-names: Tingyi
     - family-names: Gan
       given-names: Shuheng
-  journal: "Nature Communications"
   year: 2026
-  notes: "In review"
+  notes: "Manuscript in preparation"

@@ -1,6 +1,5 @@
 # FARM — Drug-conditioned cross-attention for antimicrobial-resistance prediction
 
-[![Paper](https://img.shields.io/badge/paper-Nature%20Communications%20(in%20review)-blue)](https://github.com/Ruheng-W/FARM)
 [![Dataset](https://img.shields.io/badge/data-Zenodo-orange)](https://doi.org/10.5281/zenodo.XXXXXXX)
 [![Web server](https://img.shields.io/badge/web%20server-cdc.biohpc.swmed.edu%2Ffarm-green)](https://cdc.biohpc.swmed.edu/farm/intro)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
@@ -203,17 +202,16 @@ If you use FARM in your work please cite:
 > Wang R., Wanyan T., Gan S., Kim J., Zarek C. M., Koh A. Y., Liu F., Cong Q.,
 > Liu D., Greenberg D., Xiao G., Xie Y., Zhan X. (2026). *Interpretable
 > Antimicrobial Resistance Prediction via Cross-Attention Between Antibiotic
-> Substructures and Genomic Features.* Nature Communications (in review).
+> Substructures and Genomic Features.* Manuscript in preparation.
 
-BibTeX (will be updated on acceptance):
+BibTeX (will be updated once the paper is accepted):
 
 ```bibtex
-@article{farm2026,
+@unpublished{farm2026,
   title  = {Interpretable Antimicrobial Resistance Prediction via Cross-Attention Between Antibiotic Substructures and Genomic Features},
   author = {Wang, Ruheng and Wanyan, Tingyi and Gan, Shuheng and Kim, Jiwoong and Zarek, Christina M. and Koh, Andrew Y. and Liu, Fangyu and Cong, Qian and Liu, Dajiang and Greenberg, David and Xiao, Guanghua and Xie, Yang and Zhan, Xiaowei},
-  journal= {Nature Communications},
   year   = {2026},
-  note   = {In review}
+  note   = {Manuscript in preparation}
 }
 ```
 
