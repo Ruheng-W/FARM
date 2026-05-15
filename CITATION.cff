@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+title: "FARM — Drug-conditioned cross-attention for antimicrobial-resistance prediction"
+message: "If you use this software, please cite the accompanying paper."
+type: software
+authors:
+  - family-names: Wang
+    given-names: Ruheng
+  - family-names: Wanyan
+    given-names: Tingyi
+  - family-names: Gan
+    given-names: Shuheng
+  - family-names: Kim
+    given-names: Jiwoong
+  - family-names: Zarek
+    given-names: Christina M.
+  - family-names: Koh
+    given-names: Andrew Y.
+  - family-names: Liu
+    given-names: Fangyu
+  - family-names: Cong
+    given-names: Qian
+  - family-names: Liu
+    given-names: Dajiang
+  - family-names: Greenberg
+    given-names: David
+  - family-names: Xiao
+    given-names: Guanghua
+  - family-names: Xie
+    given-names: Yang
+  - family-names: Zhan
+    given-names: Xiaowei
+repository-code: "https://github.com/Ruheng-W/FARM"
+url: "https://cdc.biohpc.swmed.edu/farm/intro"
+license: MIT
+year: 2026
+preferred-citation:
+  type: article
+  title: "Interpretable Antimicrobial Resistance Prediction via Cross-Attention Between Antibiotic Substructures and Genomic Features"
+  authors:
+    - family-names: Wang
+      given-names: Ruheng
+    - family-names: Wanyan
+      given-names: Tingyi
+    - family-names: Gan
+      given-names: Shuheng
+  journal: "Nature Communications"
+  year: 2026
+  notes: "In review"

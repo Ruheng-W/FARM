@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+*.log
+*.pkl
+*.h5
+*.pt
+*.ckpt
+.DS_Store
+.idea/
+.vscode/
+*.swp
+build/
+dist/

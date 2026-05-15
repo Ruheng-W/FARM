@@ -1,0 +1,18 @@
+# Pinned to match the environment described in environment.yml.
+# Install with:  pip install -r requirements.txt
+# (or use environment.yml for a complete conda env).
+
+numpy>=1.23
+pandas>=2.0
+scipy
+scikit-learn>=1.3
+matplotlib
+jupyter
+openpyxl
+rdkit
+tensorflow==2.15.1
+tensorflow-addons==0.23.0
+keras==2.15.0
+tf-keras==2.15.1
+reportlab
+python-docx
