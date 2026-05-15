@@ -1,15 +1,14 @@
 # Notebooks
 
-Reviewer-facing demos to make the work accessible without retraining.
+Hands-on demonstrations of the model.
 
-| Notebook | Purpose | Runtime |
-|---|---|---|
-| `01_quick_start.ipynb` | Load the tiny example dataset → predict resistance for one (drug, isolate) pair → visualise atom and gene attention. | < 1 min on CPU |
-| `02_attention_visualization.ipynb` | Reproduce Figure 3 (atom-level saliency) and Figure 4 (gene-level cross-attention) on the trained model. | 2–5 min on GPU |
-| `03_external_screen_eval.ipynb` | Reproduce Figure 6 (out-of-distribution generalisation to the 144-drug Maier et al. screen). | ~10 min on GPU |
+| Notebook | Purpose |
+|---|---|
+| `01_quick_start.ipynb` | Score one (drug, isolate) pair with a trained checkpoint. |
+| `02_attention_visualization.ipynb` | Atom-level saliency and gene-level cross-attention plots. |
+| `03_external_screen_eval.ipynb` | Evaluate the 144-drug external screen end-to-end. |
 
-> ⚠️ **Note**: notebooks `02` and `03` require the pretrained FARM checkpoint,
-> which is not redistributed in this repository. For one-off predictions
-> use the FARM web server: <https://cdc.biohpc.swmed.edu/farm/intro>.
-> For full retraining + evaluation use the data on Zenodo and the
-> training scripts in `farm/`.
+Each notebook has a configuration cell at the top with a `CHECKPOINT_PATH`
+placeholder — point it at your trained FARM checkpoint (or train one with
+`python -m farm.train ...`). The full reference data is on Zenodo:
+<https://doi.org/10.5281/zenodo.20217971>.

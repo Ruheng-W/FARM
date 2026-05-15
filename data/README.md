@@ -11,23 +11,9 @@ drug SMILES and train/test splits are hosted on Zenodo:
 > - 1,962 KO-cluster reference + drug SMILES + train/test splits
 > - License: CC BY 4.0
 
-Total size: approximately **XX GB**. The Zenodo record has its own
-`DATA_README.md` that documents every file in detail.
-
-## Quick start example
-
-The `small_example/` directory ships a tiny < 5 MB subset of the harmonised
-data so the quick-start notebook can run without downloading the full
-dataset. The example is **not representative** of the full benchmark — it
-exists only for code verification.
-
-## Private cohorts
-
-The Chile and TIDB cohorts contain isolates from clinical collections at
-the contributing institutions and are subject to local IRB restrictions.
-De-identified aggregate statistics are included in `Supplementary
-Table 2` / `STable3` (Excel sheet). Per-isolate genotype + phenotype data
-are available on reasonable request to the corresponding authors.
+The Zenodo record has its own `DATA_README.md` documenting every file
+in detail. Download the `FARM_dataset_v1.tar.gz` archive, extract it, and
+point the notebooks at the resulting `FARM_dataset_v1/` directory.
 
 ## Public data sources used in the harmonised cohort
 
@@ -37,9 +23,12 @@ are available on reasonable request to the corresponding authors.
 | ARIsolateBank | FDA–CDC AR Isolate Bank | Lutgring et al. 2018 |
 | AstraZeneca | AstraZeneca *P. aeruginosa* resistome panel | Kos et al. 2015 |
 | CF | Cystic-fibrosis *P. aeruginosa* cohort | Monogue et al. 2023 |
+| Chile | Clinical *P. aeruginosa* dataset, Chile | released here |
 | German | German ML diagnostics cohort | Khaledi et al. 2020 |
 | PATRIC | PATRIC / BV-BRC subset | Antonopoulos et al. 2019 |
 | Rabin | Rabin Medical Center Gram-negative set | Koch et al. 2025 |
 | Shelburne | Bloodstream-infection cohort | Shelburne et al. 2017 |
-| Chile | private |  |
-| TIDB | private |  |
+| TIDB | TIDB institutional dataset | released here |
+
+The 144-drug external-screen subset is derived from Maier *et al.* 2018,
+*Nature* 555(7698): 623–628 — DOI: <https://doi.org/10.1038/nature25979>.

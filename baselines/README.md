@@ -1,22 +1,21 @@
-# Baseline models
+# `baselines/` — reference models
 
-The paper compares FARM against:
+The paper compares FARM against several deep-learning and classical-ML
+baselines, trained on the same harmonised AMR cohort data.
 
-| Baseline | Type | File |
+| Module | Model | Build function |
 |---|---|---|
-| MLP | Deep learning — dense | `mlp.py` |
-| CNN | Deep learning — 1-D convolution | `cnn.py` |
-| Transformer | Deep learning — sequence transformer | `transformer.py` |
-| Random Forest | Classical ML — sklearn `RandomForestClassifier` | `classical.py` |
-| Elastic Net | Classical ML — sklearn `LogisticRegression(penalty='elasticnet')` | `classical.py` |
-| VAMPr | Specialized AMR — per-drug logistic regression | Kim et al. 2020, code at https://github.com/jaehyunkim-rutgers/VAMPr |
-| ResFinder | Specialized AMR — rule/database | https://bitbucket.org/genomicepidemiology/resfinder/ |
-| RGI (CARD) | Specialized AMR — rule/database | https://github.com/arpcard/rgi |
+| `mlp.py` | Multi-layer perceptron, 1024→512→256→1 with Dropout 0.5 | `mlp.build_model(input_dim, dropout, lr)` |
+| `cnn.py` | 1-D CNN on the atom one-hot SMILES sequence + dense gene branch | `cnn.build_model(max_atoms, atom_vocab, gene_dim, lr)` |
+| `transformer.py` | 2-block sequence Transformer on the SMILES + dense gene branch | `transformer.build_model(max_atoms, atom_vocab, gene_dim, d_model, num_heads, n_blocks, lr)` |
+| `classical.py` | Random Forest + Elastic-Net logistic regression (scikit-learn) | `classical.build_random_forest(...)`, `classical.build_elastic_net(...)` |
 
-Architectures and training settings for every baseline are summarised in
-**Supplementary Table 8** of the paper.
+All deep-learning baselines compile with Adam + BCE loss; learning rates
+follow the values reported in the paper.
 
-The MLP / CNN / Transformer / RF / Elastic Net baselines share the FARM
-training entry-point and are toggled with `--model {mlp,cnn,transformer,rf,enet}`.
-VAMPr, ResFinder, and RGI are run from their upstream repositories — see
-`scripts/run_specialized_baselines.sh` for the exact commands we used.
+The three rule/database baselines (**VAMPr**, **ResFinder**, **RGI/CARD**)
+are run from their upstream repositories:
+
+- VAMPr: <https://github.com/jaehyunkim-rutgers/VAMPr>
+- ResFinder: <https://bitbucket.org/genomicepidemiology/resfinder/>
+- RGI (CARD): <https://github.com/arpcard/rgi>

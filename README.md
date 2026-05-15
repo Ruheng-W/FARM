@@ -110,20 +110,13 @@ to the corresponding authors.
 
 ## Reproducing the paper
 
-| Output | Command |
+| Result | Command |
 |---|---|
-| Figure 2B (cross-cohort accuracy) | `bash scripts/train_cohort_holdout.sh` |
-| Figure 2C (per-drug accuracy)     | `bash scripts/train_cohort_holdout.sh && python farm/eval.py --by-drug` |
-| Figure 3 (atom-level saliency)    | `notebooks/02_attention_visualization.ipynb` |
-| Figure 4 (gene rankings)          | `notebooks/02_attention_visualization.ipynb` |
-| Figure 5 (LODO)                   | `bash scripts/leave_one_drug_out.sh` |
-| Figure 6 (OOD screen)             | `notebooks/03_external_screen_eval.ipynb` |
-| Supplementary tables              | `python supplementary/build_all_supp_tables.py` |
-
-Each script takes 1–18 h on a single A100 depending on the workload. The
-pretrained main FARM checkpoint is not redistributed here — use the
-**FARM web server** for one-off inference, or retrain with the supplied
-splits + data for full reproducibility.
+| Cross-cohort training and evaluation | `bash scripts/train_cohort_holdout.sh /path/to/FARM_dataset_v1 runs/cohort_holdout` |
+| Leave-one-drug-out evaluation        | `bash scripts/leave_one_drug_out.sh /path/to/FARM_dataset_v1 runs/lodo` |
+| External-screen evaluation           | `bash scripts/train_external_screen.sh /path/to/FARM_dataset_v1 runs/external` |
+| Atom-level saliency + gene rankings  | `notebooks/02_attention_visualization.ipynb` |
+| Out-of-distribution screen analysis  | `notebooks/03_external_screen_eval.ipynb` |
 
 ---
 
@@ -137,34 +130,34 @@ FARM/
 ├── environment.yml
 ├── requirements.txt
 │
-├── farm/                            FARM model & training code
+├── farm/                            FARM model and inference code
 │   ├── model.py                       Drug Graphformer + cross-attention
-│   ├── data.py                        Dataset / dataloader
-│   ├── train.py                       Training loop
-│   ├── predict.py                     Inference on a drug–isolate pair
-│   └── eval.py                        Metrics + bootstrap CIs
+│   ├── data.py                        Dataset and dataloader utilities
+│   ├── train.py                       Training entry-point (CLI)
+│   ├── train_cohort_holdout.py        Cohort-holdout / LODO / full-training loops
+│   ├── predict.py                     Single-pair and batch inference
+│   ├── eval.py                        Metrics + bootstrap 95 % CIs
+│   ├── smile_rel_dist_interpreter.py  SMILES → molecular graph parser
+│   └── process_data.py                Drug + gene feature joiners
 │
-├── baselines/                       Reference baselines used in the paper
-│   ├── mlp.py / cnn.py / transformer.py
-│   └── classical.py                 Random Forest, Elastic Net
+├── baselines/                       Reference baselines compared in the paper
+│   ├── mlp.py                         MLP baseline
+│   ├── cnn.py                         1-D CNN baseline
+│   ├── transformer.py                 Sequence Transformer baseline
+│   └── classical.py                   Random Forest, Elastic Net
 │
 ├── scripts/                         Shell wrappers for common runs
-│   ├── train_cohort_holdout.sh
-│   ├── leave_one_drug_out.sh
-│   └── reproduce_figure_2.sh
+│   ├── train_cohort_holdout.sh        10-fold cohort holdout
+│   ├── leave_one_drug_out.sh          36-fold LODO
+│   └── train_external_screen.sh       full-data + external-screen evaluation
 │
-├── notebooks/                       Reviewer-facing demos
-│   ├── 01_quick_start.ipynb
-│   ├── 02_attention_visualization.ipynb
-│   └── 03_external_screen_eval.ipynb
+├── notebooks/                       Demos
+│   ├── 01_quick_start.ipynb           Score one drug-isolate pair
+│   ├── 02_attention_visualization.ipynb   Atom- and gene-level attention
+│   └── 03_external_screen_eval.ipynb  Score the 144-drug external screen
 │
-├── data/
-│   ├── README.md                    Points to Zenodo
-│   └── small_example/               <50 MB toy subset for the quick start
-│
-└── supplementary/                   Supplementary Information for the paper
-    ├── Supplementary_Information.pdf
-    └── Supplementary_Tables.xlsx
+└── data/
+    └── README.md                    Points to the Zenodo dataset record
 ```
 
 ---
