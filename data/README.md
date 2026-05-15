@@ -12,7 +12,7 @@ drug SMILES and train/test splits are hosted on Zenodo:
 > - License: CC BY 4.0
 
 The Zenodo record has its own `DATA_README.md` documenting every file
-in detail. Download the `FARM_dataset_v1.tar.gz` archive, extract it, and
+in detail. Download the `FARM_dataset_v1.zip` archive, extract it, and
 point the notebooks at the resulting `FARM_dataset_v1/` directory.
 
 ## Public data sources used in the harmonised cohort

@@ -20,7 +20,7 @@ For batch / cohort-scale inference, build a tf.data.Dataset using
 import os
 import numpy as np
 
-from .smile_rel_dist_interpreter import smiles_to_graph_inputs
+from .data import _smiles_to_graph_inputs as smiles_to_graph_inputs
 
 
 def load_checkpoint(checkpoint_path):
