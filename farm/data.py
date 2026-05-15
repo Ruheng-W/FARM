@@ -43,10 +43,14 @@ def _smiles_to_graph_inputs(smiles):
     }
 
 
-COHORTS = [
-    'antibiogram', 'ARIsolateBank', 'AstraZeneca', 'CF', 'Chile',
-    'German', 'PATRIC', 'Rabin', 'Shelburne', 'TIDB',
+PUBLIC_COHORTS = [
+    'antibiogram', 'ARIsolateBank', 'AstraZeneca', 'CF',
+    'German', 'PATRIC', 'Shelburne',
 ]
+
+RESTRICTED_COHORTS = ['Rabin', 'Chile', 'TIDB']
+
+COHORTS = PUBLIC_COHORTS + RESTRICTED_COHORTS
 
 
 # ---------- phenotype.txt ----------

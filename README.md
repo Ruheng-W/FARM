@@ -18,6 +18,10 @@ model attends to).
 We evaluate FARM on 10 harmonized cohorts spanning **7,216 isolates, 36
 antibiotics, 11 species, and 63,870 isolate–drug observations**, and on an
 independent in-vitro screen of 144 antibiotics against 39 sequenced strains.
+The public release on Zenodo contains 7 of the 10 cohorts (6,562 isolates,
+35 drugs); the remaining 3 cohorts (Rabin, Chile, TIDB) are subject to
+data-use restrictions and are available from the corresponding authors on
+request.
 
 > 📄 **No-install demo:** the FARM web server lets you upload a genome /
 > drug pair and get a prediction directly in the browser:
@@ -89,9 +93,10 @@ conda activate farm
 
 The processed AMR cohorts, the external-screen panel, train/test splits and
 all reference files are hosted on **Zenodo** (DOI:
-`10.5281/zenodo.20217971`, ~4 MB compressed):
+`10.5281/zenodo.20217971`):
 
-- 10 harmonised cohort genotype–phenotype datasets (7,216 isolates, 36 drugs)
+- 7 publicly redistributable cohort genotype–phenotype datasets
+  (6,562 isolates, 35 drugs, 58,388 observations)
 - 144-drug external-screen panel (Maier et al. 2018, filtered to antibiotics)
 - KEGG ortholog reference (1,962 KO-clusters, AMR-related)
 - Drug SMILES (36 training drugs + 144 external drugs)
@@ -101,10 +106,13 @@ all reference files are hosted on **Zenodo** (DOI:
 See `data/README.md` for download instructions and the Zenodo record's
 `DATA_README.md` for the full file manifest.
 
-**For private cohorts (Chile, TIDB):** raw data are subject to local IRB
-restrictions and are not redistributed. Aggregated / de-identified summaries
-are included where permitted; full access is available on reasonable request
-to the corresponding authors.
+**Restricted cohorts (Rabin, Chile, TIDB).** Three of the ten cohorts used
+in the manuscript are not redistributed in the Zenodo record due to
+data-use restrictions imposed by the contributing institutions. They are
+available from the corresponding authors upon reasonable request, subject
+to the originating institutions' data-sharing policies. The drugs
+*ofloxacin* and *ceftazidime-avibactam* appear only in those restricted
+cohorts.
 
 ---
 
@@ -147,9 +155,9 @@ FARM/
 │   └── classical.py                   Random Forest, Elastic Net
 │
 ├── scripts/                         Shell wrappers for common runs
-│   ├── train_cohort_holdout.sh        10-fold cohort holdout
-│   ├── leave_one_drug_out.sh          36-fold LODO
-│   └── train_external_screen.sh       full-data + external-screen evaluation
+│   ├── train_cohort_holdout.sh        Cohort-holdout (7 public folds; 10 with restricted data)
+│   ├── leave_one_drug_out.sh          Leave-one-drug-out (35 public folds; 36 with restricted data)
+│   └── train_external_screen.sh       Full-data + external-screen evaluation
 │
 ├── notebooks/                       Demos
 │   ├── 01_quick_start.ipynb           Score one drug-isolate pair
