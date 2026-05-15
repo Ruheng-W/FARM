@@ -1,6 +1,6 @@
 # FARM — Drug-conditioned cross-attention for antimicrobial-resistance prediction
 
-[![Dataset](https://img.shields.io/badge/data-Zenodo-orange)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![Dataset](https://img.shields.io/badge/data-Zenodo-orange)](https://doi.org/10.5281/zenodo.20217971)
 [![Web server](https://img.shields.io/badge/web%20server-cdc.biohpc.swmed.edu%2Ffarm-green)](https://cdc.biohpc.swmed.edu/farm/intro)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
@@ -89,7 +89,7 @@ conda activate farm
 
 The processed AMR cohorts, the external-screen panel, train/test splits and
 all reference files are hosted on **Zenodo** (DOI:
-`10.5281/zenodo.XXXXXXX`, ~XX GB):
+`10.5281/zenodo.20217971`, ~4 MB compressed):
 
 - 10 harmonised cohort genotype–phenotype datasets (7,216 isolates, 36 drugs)
 - 144-drug external-screen panel (Maier et al. 2018, filtered to antibiotics)

@@ -3,7 +3,7 @@
 The processed AMR cohorts, the external screen, KO-cluster features,
 drug SMILES and train/test splits are hosted on Zenodo:
 
-> **Zenodo record**: <https://doi.org/10.5281/zenodo.XXXXXXX>
+> **Zenodo record**: <https://doi.org/10.5281/zenodo.20217971>
 >
 > Contains:
 > - 10 harmonised cohort genotype–phenotype datasets (7,216 isolates × 36 drugs)
