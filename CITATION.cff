@@ -31,7 +31,7 @@ authors:
     given-names: Xiaowei
 repository-code: "https://github.com/Ruheng-W/FARM"
 url: "https://cdc.biohpc.swmed.edu/farm/intro"
-license: MIT
+license: GPL-3.0-only
 year: 2026
 preferred-citation:
   type: unpublished

@@ -44,11 +44,11 @@ def _smiles_to_graph_inputs(smiles):
 
 
 PUBLIC_COHORTS = [
-    'antibiogram', 'ARIsolateBank', 'AstraZeneca', 'CF',
+    'antibiogram', 'ARIsolateBank', 'AstraZeneca',
     'German', 'PATRIC', 'Shelburne',
 ]
 
-RESTRICTED_COHORTS = ['Rabin', 'Chile', 'TIDB']
+RESTRICTED_COHORTS = ['CF', 'Chile', 'Rabin', 'TIDB']
 
 COHORTS = PUBLIC_COHORTS + RESTRICTED_COHORTS
 

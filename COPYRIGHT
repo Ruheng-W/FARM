@@ -1,0 +1,44 @@
+Copyrights
+
+Copyright (c) 2018, The University of Texas Southwestern Medical Center.
+All rights reserved; and
+
+This software and any related documentation constitutes published and/or
+unpublished works and may contain valuable trade secrets and proprietary
+information belonging to The University of Texas Southwestern Medical Center
+(UT SOUTHWESTERN). None of the foregoing material may be copied, duplicated
+or disclosed without the express written permission of UT SOUTHWESTERN.
+IN NO EVENT SHALL UT SOUTHWESTERN BE LIABLE TO ANY PARTY FOR DIRECT,
+INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST
+PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION,
+EVEN IF UT SOUTHWESTERN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+UT SOUTHWESTERN SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF ANY,
+PROVIDED HEREUNDER IS PROVIDED "AS IS". UT SOUTHWESTERN HAS NO OBLIGATION
+TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+
+This software contains, builds upon, or makes use of copyrighted materials
+from the following projects and data sources, each of which carries its own
+license terms that apply to the corresponding components:
+
+  - Python and the Python standard library (PSF License)
+  - NumPy, SciPy, pandas, scikit-learn, Matplotlib, openpyxl, Jupyter
+    (BSD / BSD-3-Clause-style licenses)
+  - TensorFlow, Keras, tf-keras, tensorflow-addons (Apache License 2.0)
+  - RDKit (BSD 3-Clause)
+  - reportlab (BSD 3-Clause), python-docx (MIT)
+  - The KEGG database (KEGG Orthology / KEGG Pathway annotations), used
+    under the KEGG terms and conditions
+    (https://www.kegg.jp/kegg/legal.html)
+  - The UniProt knowledgebase (CC BY 4.0), used during the upstream
+    gene-clustering step
+  - The VAMPr pipeline (Kim et al. 2020, PLoS Comp. Biol.; MIT License),
+    used to derive KO-cluster gene-presence / mutation features
+  - Public AMR cohort datasets (Antibiogram-SRA, FDA-CDC AR Isolate Bank,
+    AstraZeneca P. aeruginosa resistome panel, German ML-diagnostics
+    cohort, PATRIC/BV-BRC, Shelburne bloodstream-infection cohort) and
+    the Maier et al. 2018 in vitro drug-screen panel, each redistributed
+    or referenced under their respective original licenses.
+
+Corresponding terms and conditions apply to each of the above.

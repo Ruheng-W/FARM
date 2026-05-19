@@ -2,7 +2,7 @@
 
 [![Dataset](https://img.shields.io/badge/data-Zenodo-orange)](https://doi.org/10.5281/zenodo.20217971)
 [![Web server](https://img.shields.io/badge/web%20server-cdc.biohpc.swmed.edu%2Ffarm-green)](https://cdc.biohpc.swmed.edu/farm/intro)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
 
 FARM (**F**unctional **A**ntimicrobial **R**esistance **M**odel) is a deep-learning
 framework that predicts whether a given antibiotic will be effective against
@@ -18,10 +18,10 @@ model attends to).
 We evaluate FARM on 10 harmonized cohorts spanning **7,216 isolates, 36
 antibiotics, 11 species, and 63,870 isolate–drug observations**, and on an
 independent in-vitro screen of 144 antibiotics against 39 sequenced strains.
-The public release on Zenodo contains 7 of the 10 cohorts (6,562 isolates,
-35 drugs); the remaining 3 cohorts (Rabin, Chile, TIDB) are subject to
-data-use restrictions and are available from the corresponding authors on
-request.
+The public release on Zenodo contains 6 of the 10 cohorts (6,446 isolates,
+34 drugs); the remaining 4 clinical cohorts (CF, Chile, Rabin, TIDB) are
+subject to data-use restrictions and are available from the corresponding
+authors on request.
 
 > 📄 **No-install demo:** the FARM web server lets you upload a genome /
 > drug pair and get a prediction directly in the browser:
@@ -95,8 +95,8 @@ The processed AMR cohorts, the external-screen panel, train/test splits and
 all reference files are hosted on **Zenodo** (DOI:
 `10.5281/zenodo.20217971`):
 
-- 7 publicly redistributable cohort genotype–phenotype datasets
-  (6,562 isolates, 35 drugs, 58,388 observations)
+- 6 publicly redistributable cohort genotype–phenotype datasets
+  (6,446 isolates, 34 drugs, 57,338 observations)
 - 144-drug external-screen panel (Maier et al. 2018, filtered to antibiotics)
 - KEGG ortholog reference (1,962 KO-clusters, AMR-related)
 - Drug SMILES (36 training drugs + 144 external drugs)
@@ -106,13 +106,15 @@ all reference files are hosted on **Zenodo** (DOI:
 See `data/README.md` for download instructions and the Zenodo record's
 `DATA_README.md` for the full file manifest.
 
-**Restricted cohorts (Rabin, Chile, TIDB).** Three of the ten cohorts used
-in the manuscript are not redistributed in the Zenodo record due to
-data-use restrictions imposed by the contributing institutions. They are
-available from the corresponding authors upon reasonable request, subject
-to the originating institutions' data-sharing policies. The drugs
-*ofloxacin* and *ceftazidime-avibactam* appear only in those restricted
-cohorts.
+**Restricted clinical cohorts (CF, Chile, Rabin, TIDB).** Four of the
+ten cohorts used in the manuscript are clinical datasets and are not
+redistributed in the Zenodo record due to data-use restrictions imposed
+by the contributing institutions. Per-cohort dimensions are documented
+in `COHORT_MANIFEST.md` (Zenodo). The underlying data are available
+from the corresponding authors upon reasonable request, subject to the
+originating institutions' data-sharing policies. The drugs *ofloxacin*,
+*ceftazidime-avibactam*, and *piperacillin* appear only in those
+restricted cohorts.
 
 ---
 
@@ -155,8 +157,8 @@ FARM/
 │   └── classical.py                   Random Forest, Elastic Net
 │
 ├── scripts/                         Shell wrappers for common runs
-│   ├── train_cohort_holdout.sh        Cohort-holdout (7 public folds; 10 with restricted data)
-│   ├── leave_one_drug_out.sh          Leave-one-drug-out (35 public folds; 36 with restricted data)
+│   ├── train_cohort_holdout.sh        Cohort-holdout (6 public folds; 10 with restricted data)
+│   ├── leave_one_drug_out.sh          Leave-one-drug-out (34 public folds; 36 with restricted data)
 │   └── train_external_screen.sh       Full-data + external-screen evaluation
 │
 ├── notebooks/                       Demos
@@ -220,8 +222,9 @@ BibTeX (will be updated once the paper is accepted):
 
 ## License
 
-- **Code**: MIT (see `LICENSE`)
-- **Data on Zenodo**: CC BY 4.0
+Both the code in this repository and the data on Zenodo are released
+under the **GNU General Public License v3.0 (GPL-3.0)** — see `LICENSE`.
+Copyright and third-party notices are in `COPYRIGHT`.
 
 ---
 
