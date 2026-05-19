@@ -12,7 +12,7 @@ OUT_DIR="${2:?usage: $0 <data-root> <out-dir>}"
 
 mkdir -p "$OUT_DIR"
 
-COHORTS=(antibiogram ARIsolateBank AstraZeneca CF Chile German PATRIC Rabin Shelburne TIDB)
+COHORTS=(antibiogram ARIsolateBank AstraZeneca CF Chile German PATRIC Rabin MDAnderson TIDB)
 
 for c in "${COHORTS[@]}"; do
     echo ">>> cohort-holdout fold: test = $c"

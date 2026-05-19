@@ -25,7 +25,7 @@ point the notebooks at the resulting `FARM_dataset_v1/` directory.
 | AstraZeneca | AstraZeneca *P. aeruginosa* resistome panel | Kos et al. 2015 |
 | German | German ML diagnostics cohort | Khaledi et al. 2020 |
 | PATRIC | PATRIC / BV-BRC subset | Antonopoulos et al. 2019 |
-| Shelburne | Bloodstream-infection cohort | Shelburne et al. 2017 |
+| MDAnderson | Bloodstream-infection cohort (MD Anderson) | Shelburne et al. 2017 |
 
 ## Restricted-access clinical cohorts (4 cohorts)
 

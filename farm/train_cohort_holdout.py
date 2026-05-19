@@ -75,7 +75,7 @@ COHORT_SOURCES = {
     'German':        'test_dataset7.pkl',
     'PATRIC':        'test_dataset8.pkl',
     'Rabin':         'test_dataset9.pkl',
-    'Shelburne':     'test_dataset.pkl',
+    'MDAnderson':    'test_dataset.pkl',
     'TIDB':          'test_dataset10.pkl',
 }
 
