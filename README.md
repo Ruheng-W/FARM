@@ -135,7 +135,7 @@ restricted cohorts.
 ```
 FARM/
 ├── README.md
-├── LICENSE                          MIT
+├── LICENSE                          GPL-3.0
 ├── CITATION.cff
 ├── environment.yml
 ├── requirements.txt
